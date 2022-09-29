@@ -1,0 +1,21 @@
+*{
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  *{
+   font-family: 'Times New Roman', Times, serif;
+  
+  } 
+
+  body{
+    display: flex;
+    flex-direction: column;
+    height: 600 px;
+    padding: 1em;
+   
+background: white
+
+   
+  }
+  

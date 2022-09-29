@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}  
+
+body{
+  display: flex;
+  flex-direction: column;  
+  background: radial-gradient(circle, red, rgb(241, 162, 175), rgb(245, 240, 238));
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:white;
+ 
+}
+
+.contenedorPadre{ 
+  margin: auto;     
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto 3fr auto;
+  grid-template-areas: 
+     "header header"
+     "main aside"
+     "footer footer";
+}
+
+.header{
+ 
+  background-image: url(./imágenes/fondo\ lima\ 2.jpg);
+  grid-area: header;
+  padding:1.2rem;
+  display:flex;
+  grid-area: header;
+  flex-direction: column;
+  justify-content: space-between   
+}
+
+.header h1{  
+  padding:1.2rem;
+  margin: 5px; 
+  height: 400px;  
+  text-transform: uppercase;
+  line-height: 3;    
+  text-align: center;
+  color: white;  
+  font-size: 80px;
+  border-style: hidden ;
+  background-repeat: no-repeat;
+  background-size:cover;
+  border-radius: 30px;
+  position: relative;
+}
+.header nav{
+  order: -1;
+  padding:1.2rem;
+}
+
+.PlazaDeArmas{
+  width: 500px;
+  height: 300px;
+  
+  
+}
+
+h2{
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}
+
+ 
+h1,h2{
+    font-family: 'Courgette', cursive;
+    font-style: italic;
+    padding: 20px;
+    margin: 10px;
+  }
+
+  
+ul{
+    margin: 5px 10px 12px 15px;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+}
+.menu li{
+  
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 80px;
+ 
+}
+
+ul ul {
+  position: absolute;
+    display: none;
+}
+
+ul ul li {
+  display: block;
+  }
+
+li:hover{
+         
+      display: inline;
+      list-style-type: none;
+      border-style: ridge;
+      border-top:solid 2px red;
+   }
+.menu li{
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 80px;
+  
+}
+.menu li a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+.menu li a:hover{
+    color: rgb(8, 0, 0);
+    font-weight: bold;
+}
+   
+  
+  a {
+      display: inline-block;
+      font-size: 15px;
+      text-align: center;
+      display: inline;
+      color: rgba(222, 94, 94, 0.285);
+      
+      padding: 5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-family: sans-serif;
+    }
+    a:hover {
+      background-color: rgb(244, 227, 213);
+      border-radius: 10px;
+    } 
+    
+    ul ul {
+      position: absolute;
+      display: none;
+      }
+    ul ul li {
+        display: block;
+        }
+    ul li:hover ul {
+          display:block;
+          background-color:black
+      }
+      .parrafo{
+        padding: 20px;
+        margin: 10px;
+        width:500px ;
+        height: 200px;
+        overflow:auto;
+        border-bottom:rgb(225, 22, 22);
+        border-style: groove;
+        display: inline-block;
+            
+      }
+
+     
+.main{
+       
+        padding:1.2rem;
+        grid-area: main;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+}
+.main a{
+  color: black;
+  
+}
+.aside{
+  
+  padding:1.2rem;
+  display: flex;
+  flex-direction: column;
+  grid-area: aside;
+  justify-content: start; 
+  
+}
+
+.imgAmistad{
+  width: 300px;
+  height: 300px;
+  
+}
+.imgEnamorado{
+  width: 300px;
+  height: 300px;
+  transition: all 2s ease;
+}
+.imgEnamorado:hover{
+  
+  width: 400px;
+ 
+}  
+.imgAmistad:hover{
+  transform: scale(1.3, 1.3);
+}       
+    
+.footer{
+  background-image: url(./imágenes/Gastronomia\ Lima.jpg);
+  padding:1.2rem;
+  grid-area: footer;
+  text-align: center; 
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background: radial-gradient(circle, red, rgb(241, 162, 175), rgb(245, 240, 238));
+}
+
+@media screen and (max-width:600px){
+  .contenedorPadre{ 
+    
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 2fr auto auto;
+    grid-template-areas: 
+       "header"
+       "main"
+       "aside"
+       "footer";
+  }
+}
